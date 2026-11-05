@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captain Ahmed Al Marzooqi | كابتن أحمد المرزوقي</title>
+    <meta name="description" content="Captain Ahmed Al Marzooqi - personal assistant | كابتن أحمد المرزوقي - المساعد الشخصي">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Captain Ahmed Al Marzooqi | كابتن أحمد المرزوقي">
+    <meta property="og:description" content="Contact my personal assistant | تواصل مع المساعد الشخصي">
+    <meta property="og:image" content="https://mydigital-id.github.io/captain-ahmed/assets/images/ahmed.jpg">
+    
+    
+    <!-- تغيير الخطوط لخطوط أشيك (Tajawal للعربي و Montserrat للإنجليزي) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Tajawal:wght@400;500;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- صورة الطيار -->
+    <div class="pilot-img-container">
+        <!-- تأكد أن الصورة اسمها ahmed.jpg وموجودة في نفس الفولدر -->
+        <img src="assets/images/ahmed.jpg" alt="Captain Ahmed Al Marzooqi" class="pilot-img" onerror="this.style.display='none'">
+    </div>
+
+    <!-- رسالة الترحيب بالإنجليزية -->
+    <div class="welcome-text">
+        
+    </div>
+
+    <!-- رسالة التوضيح -->
+    <div class="status-card">
+        <p></p>
+    </div>
+
+    <!-- أزرار اللغات -->
+    <div class="lang-container">
+        <button class="lang-btn" data-l="ar" onclick="changeLang('ar')">
+            <span class="lang-icon">🇦🇪</span>
+            عربي
+        </button>
+        <button class="lang-btn" data-l="en" onclick="changeLang('en')">
+            <span class="lang-icon">🇬🇧</span>
+            English
+        </button>
+        <button class="lang-btn" data-l="ur" onclick="changeLang('ur')">
+            <span class="lang-icon">🇵🇰</span>
+            اردو
+        </button>
+    </div>
+
+    <!-- المساعد الشخصي (الصورة والتلميح جنب بعض) -->
+    <div class="assistant-wrapper">
+        <div class="chat-hint" id="chatHint">يسعدني التواصل معك</div>
+        
+        <!-- زرار المساعد: تأكد أن الصورة اسمها assistant.jpg -->
+        <button class="assistant-btn" onclick="openChat()" aria-label="Chat">
+            <img src="assets/images/assistant.jpg" alt="Assistant" onerror="this.style.display='none'">
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
