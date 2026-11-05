@@ -257,11 +257,18 @@ textarea.cb-in{border-radius:20px}
 .cb-field{position:relative}
 .cb-face{display:flex;align-items:center;gap:10px;min-height:52px;padding:12px 16px;border-radius:26px;background:#fff;color:#0a192f;border:2px solid transparent;font-weight:700}
 .cb-face.cb-bad{border-color:#ef4444}
-.cb-field input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px}
+.cb-field input{position:absolute;inset:0;width:100%;height:100%;opacity:0;pointer-events:none}
 .cb-ap{width:58px;border-radius:26px;border:2px solid #fbbf24;background:none;color:#fff;font:inherit;font-weight:800;cursor:pointer}
 .cb-ap.on{background:#fbbf24;color:#0a192f}
-.status-card{background:#ffe8c7!important;border:2px solid #f59e0b!important}
-.status-card,.status-card *{color:#0a192f!important;font-weight:800!important}
-.status-card p{font-size:1.15rem!important;line-height:1.9}
+.status-card{background:#ffe8c7!important;border:3px solid #f59e0b!important;padding:10px!important}
+.status-card p{background:#ff9800;border-radius:12px;padding:18px 12px;margin:0;color:#fff!important;font-weight:800!important;font-size:1.25rem!important;line-height:1.8;-webkit-text-stroke:1px #0a192f;paint-order:stroke fill;text-shadow:0 2px 3px rgba(0,0,0,.35)}
 .cb-ctl{align-self:stretch;background:#102a4c;border:1px solid rgba(251,191,36,.35);border-radius:18px;padding:12px}
 .cb-in:focus{outline:none;border-color:#fbbf24}
+.cb-face{cursor:pointer}
+.cb-clock{display:none;flex-direction:column;gap:10px;background:#0a192f;border-radius:16px;padding:12px}
+.cb-clock.open{display:flex}
+.cb-disp{text-align:center;font:800 2.3rem/1.3 'Montserrat',monospace;color:#fff;direction:ltr;letter-spacing:2px;border-bottom:2px solid #ff9800;padding-bottom:6px}
+.cb-g2{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;direction:ltr}
+.cb-chip{min-height:42px;border:0;border-radius:10px;background:#16315a;color:#fff;font:inherit;font-weight:800;cursor:pointer}
+.cb-chip.on,.cb-ap.on{background:#ff9800;color:#0a192f}
+.cb-ap{border-color:#ff9800}

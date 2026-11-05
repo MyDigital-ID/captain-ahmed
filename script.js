@@ -1,7 +1,7 @@
         const T={
-          ar:{d:'rtl',w:'مرحباً بك في صفحة الكابتن<br><span>أحمد المرزوقي</span>',s:'أنا خارج البلاد في الوقت الحالي.<br>المساعد الشخصي متاح لخدمتك.',h:'يسعدني التواصل معك'},
-          en:{d:'ltr',w:'Welcome to the page of Captain<br><span>Ahmed Al Marzooqi</span>',s:'I am currently abroad.<br>My personal assistant is at your service.',h:'Chat with my assistant'},
-          ur:{d:'rtl',w:'کیپٹن کے صفحے پر خوش آمدید<br><span>احمد المرزوقی</span>',s:'میں اس وقت ملک سے باہر ہوں۔<br>میرا ذاتی اسسٹنٹ آپ کی خدمت میں حاضر ہے۔',h:'میرے اسسٹنٹ سے بات کریں'}
+          ar:{d:'rtl',w:'مرحباً بك في صفحة الكابتن<br><span>أحمد المرزوقي</span>',s:'في الوقت الحالي أنا خارج البلاد،<br>سيتواصل معك المساعد الشخصي',h:'يسعدني التواصل معك'},
+          en:{d:'ltr',w:'Welcome to the page of Captain<br><span>Ahmed Al Marzooqi</span>',s:'I am currently abroad,<br>my personal assistant will be in touch with you',h:'Chat with my assistant'},
+          ur:{d:'rtl',w:'کیپٹن کے صفحے پر خوش آمدید<br><span>احمد المرزوقی</span>',s:'اس وقت میں ملک سے باہر ہوں،<br>میرا ذاتی اسسٹنٹ آپ سے رابطہ کرے گا',h:'میرے اسسٹنٹ سے بات کریں'}
         };
         function changeLang(l){
             const t=T[l];
@@ -23,42 +23,42 @@
 const API='https://captain-bot.download-my-app.workers.dev';
 
 const L={
-ar:{title:'المساعد الشخصي',sub:'للكابتن أحمد المرزوقي',
-greet:'مرحباً بك، أنا المساعد الشخصي للكابتن أحمد المرزوقي. تشرفني بمعرفة اسمك الكريم؟',namePh:'اكتب اسمك',
+ar:{title:'المساعد الشخصي',sub:'متاح الآن',
+greet:'مرحباً بك، أنا المساعد الشخصي للكابتن أحمد المرزوقي. تشرفني بمعرفة اسمك الكريم؟',namePh:'الاسم',
 topic:'هلا بك يا {n}. أرجو أن تكون بخير. تواصلك بخصوص:',personal:'أمر شخصي',work:'بخصوص العمل',
-pr:'الحمد لله الكابتن بخير، وفي رحلة سفر وعودته قريبة بإذن الله. أتمنى أن تكون أمورك كلها طيبة، تفضّل اكتب رسالتك.',
-wr:'خير بإذن الله، فالك طيب. اكتب لي التفاصيل وسأوصلها للكابتن ليتواصل معك بأسرع وقت إن شاء الله.',msgPh:'اكتب رسالتك هنا',xp:'وصلتني رسالتك، وسأقوم بنقل كافة التفاصيل للكابتن أحمد بمجرد انتهاء رحلته وعودته للبلاد.',xw:'وصلتني رسالتك، وسأقوم بنقل التفاصيل للكابتن ليتواصل معك في أسرع وقت.',addB:'إضافة تفاصيل',nextB:'متابعة',
+pr:'عساه خير بإذن الله، تفضّل بكتابة رسالتك.',
+wr:'خير بإذن الله، فالك طيب. اكتب لي التفاصيل وسأوصلها للكابتن ليتواصل معك بأسرع وقت إن شاء الله.',msgPh:'الرسالة',xp:'سأقوم بالتواصل مع كابتن أحمد بمجرد أن يكون الاتصال به متاحاً وسأنقل له رسالتك، هل هناك أي تفاصيل أخرى تود إضافتها؟',xw:'سأقوم بالتواصل مع كابتن أحمد بمجرد أن يكون الاتصال به متاحاً وسأنقل له رسالتك، هل هناك أي تفاصيل أخرى تود إضافتها؟',addB:'إضافة تفاصيل',nextB:'لا، متابعة',more:'هل هناك المزيد؟',
 attachQ:'قبل إنهاء المحادثة، إذا كانت هناك أي مرفقات (صور أو ملفات PDF أو مستندات) برجاء رفعها الآن.',attach:'رفع مرفق',skip:'لا توجد مرفقات',pick:'اختيار ملفات',go:'متابعة',big:'الملف أكبر من 10 ميجا',many:'الحد الأقصى 5 ملفات',
 contactQ:'كيف تفضّل أن يتواصل معك الكابتن؟',msgs:'رسائل',call:'اتصال هاتفي',meet:'موعد مقابلة شخصية',
-w1:'ما اليوم والوقت المناسبين لاتصال الكابتن؟',w2:'ما اليوم والوقت المناسبين للمقابلة؟',ok:'تأكيد',dl:'التاريخ',am:'ص',pm:'م',
+w1:'ما اليوم والوقت المناسبين لاتصال الكابتن؟',w2:'ما اليوم والوقت المناسبين للمقابلة؟',ok:'تأكيد',dl:'التاريخ',tl:'الوقت',am:'ص',pm:'م',
 phoneQ:'تفضّل رقم هاتفك للتواصل',phPh:'رقم الهاتف',
 rv:'راجع بياناتك قبل الإرسال:',send:'إرسال',edit:'تعديل',editQ:'ما الذي تريد تعديله؟',fName:'الاسم',fMsg:'الرسالة',fContact:'طريقة التواصل',fPhone:'الهاتف',
 sending:'جارٍ الإرسال...',err:'تعذّر الإرسال، تأكد من الاتصال بالإنترنت وحاول مرة أخرى.',wait:'أرسلت رسالة قبل قليل، انتظر دقيقة ثم حاول مرة أخرى.',retry:'إعادة المحاولة',again:'رسالة جديدة',
 done:'خير بإذن الله، سأنقل كافة التفاصيل للكابتن أحمد المرزوقي وسيتم الرد عليك في أقرب وقت إن شاء الله. تحياتي',
 night:'ليلة سعيدة إن شاء الله',morn:'يومك جميل بإذن الله',aft:'أرجو لك وقتاً طيباً بإذن الله',
 lbl:['الاسم','الموضوع','الرسالة','المرفقات','التواصل','الموعد','الهاتف']},
-en:{title:'Personal Assistant',sub:'of Captain Ahmed Al Marzooqi',
-greet:"Welcome, I'm the personal assistant of Captain Ahmed Al Marzooqi. May I know your name?",namePh:'Your name',
+en:{title:'Personal Assistant',sub:'Available now',
+greet:"Welcome, I'm the personal assistant of Captain Ahmed Al Marzooqi. May I know your name?",namePh:'Name',
 topic:'Hello {n}. I hope you are doing well. Your message is about:',personal:'Personal matter',work:'Work-related',
-pr:'Thank God, the Captain is well. He is on a trip and will be back soon, God willing. I hope all is well with you. Please write your message.',
-wr:'God willing, all will be good. Please write the details and I will pass them to the Captain, who will contact you as soon as possible.',msgPh:'Write your message here',xp:'I received your message, and I will pass all the details to Captain Ahmed as soon as his trip ends and he returns.',xw:'I received your message, and I will pass the details to the Captain, who will contact you as soon as possible.',addB:'Add details',nextB:'Continue',
+pr:'Hopefully all is well, God willing. Please feel free to write your message.',
+wr:'God willing, all will be good. Please write the details and I will pass them to the Captain, who will contact you as soon as possible.',msgPh:'Message',xp:'I will contact Captain Ahmed as soon as he is available and pass on your message. Is there any other detail you would like to add?',xw:'I will contact Captain Ahmed as soon as he is available and pass on your message. Is there any other detail you would like to add?',addB:'Add details',nextB:'No, continue',more:'Anything more?',
 attachQ:'Before we finish, if you have any attachments (photos, PDFs or documents), please upload them now.',attach:'Upload attachment',skip:'No attachments',pick:'Choose files',go:'Continue',big:'File is larger than 10 MB',many:'Maximum 5 files',
 contactQ:'How would you prefer the Captain to contact you?',msgs:'Messages',call:'Phone call',meet:'In-person meeting',
-w1:"What day and time suit you for the Captain's call?",w2:'What day and time suit you for the meeting?',ok:'Confirm',dl:'Date',am:'AM',pm:'PM',
+w1:"What day and time suit you for the Captain's call?",w2:'What day and time suit you for the meeting?',ok:'Confirm',dl:'Date',tl:'Time',am:'AM',pm:'PM',
 phoneQ:'Please enter your phone number',phPh:'Phone number',
 rv:'Please review your details before sending:',send:'Send',edit:'Edit',editQ:'What would you like to edit?',fName:'Name',fMsg:'Message',fContact:'Contact method',fPhone:'Phone',
 sending:'Sending...',err:'Could not send. Check your internet connection and try again.',wait:'You sent a message a moment ago. Please wait a minute and try again.',retry:'Try again',again:'New message',
 done:"God willing, I will pass all the details to Captain Ahmed Al Marzooqi and you will receive a reply as soon as possible. Kind regards.",
 night:'Have a pleasant night!',morn:'Have a wonderful day!',aft:'Wishing you a lovely time!',
 lbl:['Name','Topic','Message','Files','Contact','When','Phone']},
-ur:{title:'ذاتی اسسٹنٹ',sub:'کیپٹن احمد المرزوقی کا',
-greet:'خوش آمدید، میں کیپٹن احمد المرزوقی کا ذاتی اسسٹنٹ ہوں۔ براہِ کرم اپنا نام بتائیں؟',namePh:'اپنا نام لکھیں',
+ur:{title:'ذاتی اسسٹنٹ',sub:'ابھی دستیاب',
+greet:'خوش آمدید، میں کیپٹن احمد المرزوقی کا ذاتی اسسٹنٹ ہوں۔ براہِ کرم اپنا نام بتائیں؟',namePh:'نام',
 topic:'خوش آمدید {n}۔ امید ہے آپ خیریت سے ہوں گے۔ آپ کا رابطہ کس سلسلے میں ہے؟',personal:'ذاتی معاملہ',work:'کام سے متعلق',
-pr:'الحمدللہ کیپٹن خیریت سے ہیں اور سفر پر ہیں، ان شاء اللہ جلد ملک واپس آئیں گے۔ امید ہے آپ کے سب معاملات ٹھیک ہوں گے۔ براہِ کرم اپنا پیغام لکھیں۔',
-wr:'ان شاء اللہ سب بہتر ہو گا۔ براہِ کرم تفصیلات لکھیں، انہیں کیپٹن تک پہنچا دیا جائے گا تاکہ وہ جلد از جلد آپ سے رابطہ کریں۔',msgPh:'اپنا پیغام یہاں لکھیں',xp:'آپ کا پیغام مل گیا ہے، کیپٹن احمد کے سفر سے واپسی پر تمام تفصیلات انہیں پہنچا دی جائیں گی۔',xw:'آپ کا پیغام مل گیا ہے، تفصیلات کیپٹن تک پہنچا دی جائیں گی تاکہ وہ جلد از جلد آپ سے رابطہ کریں۔',addB:'تفصیل شامل کریں',nextB:'آگے بڑھیں',
+pr:'ان شاء اللہ خیر ہو، براہِ کرم اپنا پیغام لکھیں۔',
+wr:'ان شاء اللہ سب بہتر ہو گا۔ براہِ کرم تفصیلات لکھیں، انہیں کیپٹن تک پہنچا دیا جائے گا تاکہ وہ جلد از جلد آپ سے رابطہ کریں۔',msgPh:'پیغام',xp:'کیپٹن احمد کے دستیاب ہوتے ہی آپ کا پیغام ان تک پہنچا دیا جائے گا۔ کیا آپ کوئی اور تفصیل شامل کرنا چاہیں گے؟',xw:'کیپٹن احمد کے دستیاب ہوتے ہی آپ کا پیغام ان تک پہنچا دیا جائے گا۔ کیا آپ کوئی اور تفصیل شامل کرنا چاہیں گے؟',addB:'تفصیل شامل کریں',nextB:'نہیں، آگے بڑھیں',more:'کیا کچھ اور؟',
 attachQ:'گفتگو ختم کرنے سے پہلے، اگر کوئی منسلکات (تصاویر، پی ڈی ایف یا دستاویزات) ہیں تو براہِ کرم ابھی اپلوڈ کریں۔',attach:'فائل اپلوڈ کریں',skip:'کوئی فائل نہیں',pick:'فائلیں منتخب کریں',go:'آگے بڑھیں',big:'فائل 10 ایم بی سے بڑی ہے',many:'زیادہ سے زیادہ 5 فائلیں',
 contactQ:'آپ چاہیں گے کہ کیپٹن آپ سے کس طرح رابطہ کریں؟',msgs:'پیغامات',call:'فون کال',meet:'ذاتی ملاقات',
-w1:'کیپٹن کی کال کے لیے آپ کو کون سا دن اور وقت مناسب ہے؟',w2:'ملاقات کے لیے آپ کو کون سا دن اور وقت مناسب ہے؟',ok:'تصدیق',dl:'تاریخ',am:'صبح',pm:'شام',
+w1:'کیپٹن کی کال کے لیے آپ کو کون سا دن اور وقت مناسب ہے؟',w2:'ملاقات کے لیے آپ کو کون سا دن اور وقت مناسب ہے؟',ok:'تصدیق',dl:'تاریخ',tl:'وقت',am:'صبح',pm:'شام',
 phoneQ:'براہِ کرم اپنا فون نمبر لکھیں',phPh:'فون نمبر',
 rv:'بھیجنے سے پہلے اپنی معلومات دیکھ لیں:',send:'بھیجیں',edit:'ترمیم',editQ:'آپ کیا تبدیل کرنا چاہتے ہیں؟',fName:'نام',fMsg:'پیغام',fContact:'رابطے کا طریقہ',fPhone:'فون',
 sending:'بھیجا جا رہا ہے...',err:'بھیجنا ممکن نہیں ہوا۔ انٹرنیٹ چیک کریں اور دوبارہ کوشش کریں۔',wait:'آپ نے ابھی پیغام بھیجا ہے۔ ایک منٹ بعد دوبارہ کوشش کریں۔',retry:'دوبارہ کوشش کریں',again:'نیا پیغام',
@@ -88,24 +88,25 @@ const ask=(ph,multi)=>new Promise(r=>{
  i.placeholder=ph;if(multi)i.rows=3;
  const go=()=>{const v=i.value.trim();if(!v){i.classList.add('cb-bad');return}ctl();r(v)};
  b.onclick=go;if(!multi)i.onkeydown=e=>{if(e.key==='Enter')go()};
- f.append(i,b);ctl(f);i.focus()});
+ f.append(i,b);ctl(f)});
 
 const when=()=>new Promise(r=>{
  const t=T(),f=mk('div','cb-box'),dw=mk('div','cb-field'),face=mk('div','cb-face','<span>📅</span><b>'+t.dl+'</b>'),d=mk('input');
  d.type='date';d.min=new Date().toISOString().slice(0,10);
+ face.onclick=()=>{try{d.showPicker()}catch(e){d.click()}};
  d.onchange=()=>{if(d.value){const[y,m,x]=d.value.split('-');face.lastChild.textContent=x+'/'+m+'/'+y;face.classList.remove('cb-bad')}};
  dw.append(face,d);
- const tw=mk('div','cb-row'),hh=mk('select','cb-in'),mm=mk('select','cb-in');let ap=0;
- hh.append(new Option('--',''));mm.append(new Option('--',''));
- for(let i=1;i<=12;i++)hh.append(new Option(String(i).padStart(2,'0'),String(i).padStart(2,'0')));
- for(let i=0;i<60;i+=5)mm.append(new Option(String(i).padStart(2,'0'),String(i).padStart(2,'0')));
- hh.dir='ltr';mm.dir='ltr';
- const pm=[mk('button','cb-ap on',t.am),mk('button','cb-ap',t.pm)];
- pm.forEach((x,i)=>x.onclick=()=>{ap=i;pm.forEach((y,j)=>y.classList.toggle('on',j===i))});
- tw.append(hh,mm,...pm);
+ let hh='',mm='',ap=0;
+ const tf=mk('div','cb-face','<span>⏰</span><b>'+t.tl+'</b>'),cp=mk('div','cb-clock'),dp=mk('div','cb-disp','--:--');
+ const upd=()=>{const s=(hh||'--')+':'+(mm||'--')+' '+(ap?t.pm:t.am);dp.textContent=s;if(hh&&mm){tf.lastChild.textContent=s;tf.classList.remove('cb-bad')}};
+ const grid=(k,set)=>{const g=mk('div','cb-g2');for(let i=0;i<12;i++){const v=String(k(i)).padStart(2,'0'),b=mk('button','cb-chip',v);b.onclick=()=>{set(v);[...g.children].forEach(x=>x.classList.toggle('on',x===b));upd()};g.append(b)}return g};
+ const ar=mk('div','cb-row'),pm=[mk('button','cb-ap on',t.am),mk('button','cb-ap',t.pm)];
+ pm.forEach((x,i)=>x.onclick=()=>{ap=i;pm.forEach((y,j)=>y.classList.toggle('on',j===i));upd()});
+ ar.append(...pm);cp.append(dp,grid(i=>i+1,v=>hh=v),grid(i=>i*5,v=>mm=v),ar);
+ tf.onclick=()=>{cp.classList.toggle('open');setTimeout(down,50)};
  const b=mk('button','cb-pri',t.ok);
- b.onclick=()=>{let ok=1;if(!d.value){face.classList.add('cb-bad');ok=0}[hh,mm].forEach(s=>{if(!s.value){s.classList.add('cb-bad');ok=0}});if(!ok)return;ctl();r(face.lastChild.textContent+'  '+hh.value+':'+mm.value+' '+(ap?t.pm:t.am))};
- f.append(dw,tw,b);ctl(f)});
+ b.onclick=()=>{let ok=1;if(!d.value){face.classList.add('cb-bad');ok=0}if(!hh||!mm){tf.classList.add('cb-bad');ok=0}if(!ok)return;ctl();r(face.lastChild.textContent+'  '+hh+':'+mm+' '+(ap?t.pm:t.am))};
+ f.append(dw,tf,cp,b);ctl(f)});
 
 const phone=()=>new Promise(r=>{
  const t=T(),f=mk('div','cb-row'),s=mk('select','cb-in cb-cc'),i=mk('input','cb-in'),b=mk('button','cb-go','➤');
@@ -127,7 +128,7 @@ const H={
 async name(){if(!S.edit)await bot(T().greet);S.name=await ask(T().namePh);me(S.name)},
 async topic(){const t=T();await bot(t.topic.replace('{n}',S.name));S.topic=await pick([['p','👤',t.personal],['w','💼',t.work]]);await bot(S.topic==='p'?t.pr:t.wr)},
 async msg(){S.msg=await ask(T().msgPh,1);me(S.msg)},
-async extra(){await bot(S.topic==='p'?T().xp:T().xw)},
+async extra(){const t=T();await bot(S.topic==='p'?t.xp:t.xw);for(;;){if(await pick([['a','✍️',t.addB],['n','✅',t.nextB]])!=='a')break;const x=await ask(t.msgPh,1);me(x);S.msg+='\n'+x;await bot(t.more)}},
 async files(){const t=T();await bot(t.attachQ);S.files=[];if(await pick([['y','📎',t.attach],['n','✅',t.skip]])==='y'){S.files=await files();me(S.files.length?'📎 '+S.files.length:t.skip)}},
 async contact(){const t=T();await bot(t.contactQ);S.contact=await pick([['m','💬',t.msgs],['c','📞',t.call],['v','🤝',t.meet]]);if(!need(S.contact))S.when=''},
 async when(){await bot(S.contact==='c'?T().w1:T().w2);S.when=await when();me(S.when)},
