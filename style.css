@@ -253,3 +253,15 @@ textarea.cb-in{border-radius:20px}
 .cb-cc{flex:0 0 112px}
 @media(min-width:768px){.cb-root{inset:auto;bottom:100px;left:40px;width:390px;height:620px;max-height:calc(100dvh - 120px)}}
 @media(prefers-reduced-motion:reduce){.cb-typing i{animation:none}}
+
+.cb-field{position:relative}
+.cb-face{display:flex;align-items:center;gap:10px;min-height:52px;padding:12px 16px;border-radius:26px;background:#fff;color:#0a192f;border:2px solid transparent;font-weight:700}
+.cb-face.cb-bad{border-color:#ef4444}
+.cb-field input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px}
+.cb-ap{width:58px;border-radius:26px;border:2px solid #fbbf24;background:none;color:#fff;font:inherit;font-weight:800;cursor:pointer}
+.cb-ap.on{background:#fbbf24;color:#0a192f}
+.status-card{background:#ffe8c7!important;border:2px solid #f59e0b!important}
+.status-card,.status-card *{color:#0a192f!important;font-weight:800!important}
+.status-card p{font-size:1.15rem!important;line-height:1.9}
+.cb-ctl{align-self:stretch;background:#102a4c;border:1px solid rgba(251,191,36,.35);border-radius:18px;padding:12px}
+.cb-in:focus{outline:none;border-color:#fbbf24}
