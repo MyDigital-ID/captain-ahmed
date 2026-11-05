@@ -21,6 +21,7 @@
 (()=>{
 // رابط الـ Worker على كلاودفلير (التوكن محفوظ هناك، مش هنا)
 const API='https://captain-bot.download-my-app.workers.dev';
+const DEBUG=true; // لما نخلّص التجربة نخليها false
 
 const L={
 ar:{title:'المساعد الشخصي',sub:'متاح الآن',
@@ -143,14 +144,14 @@ async review(){
  for(;;){
   ctl(mk('div','cb-wait',t.sending));
   try{if(Date.now()-(+localStorage.getItem('cbLast')||0)<6e4)throw'wait';await send();break}
-  catch(e){await bot(e==='wait'?t.wait:t.err);await choose([['r','🔄',t.retry]])}}
+  catch(e){await bot(e==='wait'?t.wait:t.err+(DEBUG?' ['+(e&&e.message||e)+']':''));await choose([['r','🔄',t.retry]])}}
  ctl();await bot(t.done);const h=new Date().getHours();
  await bot(h>=19||h<5?t.night:h<13?t.morn:t.aft);
  await choose([['n','✉️',t.again]]);begin();return steps.length}
 };
 
 async function send(){
- const u=API+'/',j=async r=>{if(!(await r.json()).ok)throw 1};
+ const u=API+'/',j=async r=>{const x=await r.json().catch(()=>({}));if(!x.ok)throw r.status+' '+(x.description||'')};
  if(!S.sent){
   const txt=['📩 <b>رسالة جديدة من الموقع</b>','👤 الاسم: '+esc(S.name),'📌 الموضوع: '+(S.topic==='p'?'شخصي':'بخصوص العمل'),'💬 الرسالة: '+esc(S.msg),
   '📞 التواصل المفضل: '+{m:'رسائل',c:'اتصال هاتفي',v:'مقابلة شخصية'}[S.contact],S.when&&'🗓 الموعد المناسب: '+esc(S.when),'☎️ الهاتف: '+esc(S.phone),
