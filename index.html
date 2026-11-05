@@ -8,234 +8,22 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Captain Ahmed Al Marzooqi | كابتن أحمد المرزوقي">
     <meta property="og:description" content="Contact my personal assistant | تواصل مع المساعد الشخصي">
-    <meta property="og:image" content="https://mydigital-id.github.io/captain-ahmed/ahmed.jpg">
-    <link rel="stylesheet" href="chatbot.css">
+    <meta property="og:image" content="https://mydigital-id.github.io/captain-ahmed/assets/Images/ahmed.jpg">
+    
     
     <!-- تغيير الخطوط لخطوط أشيك (Tajawal للعربي و Montserrat للإنجليزي) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Tajawal:wght@400;500;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
     
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body {
-            background: radial-gradient(circle at 50% 0%, #1a365d, #0a192f);
-            color: white;
-            font-family: 'Tajawal', sans-serif; /* الخط العربي الجديد */
-            min-height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 30px 15px 140px 15px; /* مساحات مريحة */
-            text-align: center;
-            overflow-x: hidden;
-        }
-
-        /* --- صورة الطيار --- */
-        .pilot-img-container {
-            width: 160px; /* تصغير الحجم شوية */
-            height: 160px;
-            border-radius: 50%;
-            border: 4px solid #fbbf24;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            margin-bottom: 20px;
-            overflow: hidden;
-            background: #fff;
-            flex-shrink: 0;
-        }
-
-        .pilot-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-        }
-
-        /* --- رسالة الترحيب بالإنجليزية --- */
-        .welcome-text {
-            font-family: 'Montserrat', sans-serif; /* الخط الإنجليزي الجديد */
-            font-size: 1.4rem; /* تصغير الحجم */
-            font-weight: 800;
-            margin-bottom: 8px;
-            color: #ffffff;
-            line-height: 1.4;
-            max-width: 600px;
-        }
-
-        .welcome-text span {
-            color: #fbbf24;
-        }
-
-        /* --- بطاقة رسالة التوضيح --- */
-        .status-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 15px;
-            max-width: 600px; /* عشان متمطش في الديسكتوب */
-            width: 100%;
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
-        }
-
-        .status-card p {
-            font-size: 0.95rem; /* حجم مريح للقراءة */
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
-
-        /* --- أزرار اللغات --- */
-        .lang-container {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            width: 100%;
-            max-width: 500px;
-            flex-wrap: wrap; /* عشان ينزلوا تحت بعض في الشاشات الصغيرة لو احتاجوا */
-        }
-
-        .lang-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: white;
-            padding: 12px 15px;
-            border-radius: 10px;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-            transition: all 0.3s ease;
-            font-family: 'Tajawal', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
-            flex: 1;
-            min-width: 100px; /* عشان ميبقوش رفيعين أوي */
-        }
-
-        .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
-            border-color: #fbbf24;
-        }
-
-        .lang-icon {
-            font-size: 1.5rem;
-        }
-
-        /* =========================================
-           المساعد الشخصي (صورة + تلميح جانبي)
-           ========================================= */
-        .assistant-wrapper {
-            position: fixed;
-            bottom: 25px;
-            left: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px; 
-            z-index: 100;
-            flex-direction: row-reverse; /* الكلام على يمين الصورة */
-        }
-
-        .assistant-btn {
-            width: 65px; /* تصغير الحجم شوية */
-            height: 65px;
-            border-radius: 50%;
-            border: 2px solid #fbbf24;
-            background: #e2e8f0; /* لون رمادي فاتح لو الصورة مش موجودة */
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease;
-            overflow: hidden;
-        }
-
-        .assistant-btn img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .assistant-btn:hover {
-            transform: scale(1.05);
-        }
-
-        .chat-hint {
-            background: #ffffff;
-            color: #0a192f;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            position: relative;
-        }
-
-        .chat-hint::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -5px;
-            transform: translateY(-50%);
-            border: 5px solid transparent;
-            border-left-color: #ffffff;
-            border-right: 0;
-        }
-
-        /* --- تحسينات الديسكتوب --- */
-        @media (min-width: 768px) {
-            body {
-                justify-content: center; /* توسيط المحتوى في نص الشاشة للديسكتوب */
-                padding-bottom: 50px;
-            }
-            .pilot-img-container {
-                width: 200px;
-                height: 200px;
-            }
-            .welcome-text {
-                font-size: 1.8rem;
-            }
-            .status-card p {
-                font-size: 1.1rem;
-            }
-            .lang-btn {
-                flex: none;
-                width: 120px;
-            }
-            .assistant-wrapper {
-                bottom: 40px;
-                left: 40px;
-            }
-        }
-
-        @keyframes pulse-ring {
-            0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(251, 191, 36, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
-        }
-        .assistant-btn {
-            animation: pulse-ring 2s infinite;
-        }
-
-        .pilot-img-container{display:grid;place-items:center;font-size:4rem}
-        .pilot-img-container::before{content:'✈️';grid-area:1/1}
-        .pilot-img{grid-area:1/1}
-        .assistant-btn{direction:ltr}
-        .assistant-wrapper{direction:rtl}
-        [dir=ltr] .chat-hint{direction:ltr}
-        .lang-btn.active{border-color:#fbbf24;background:rgba(251,191,36,.15)}
-        html[lang=ur] body,html[lang=ur] .lang-btn,html[lang=ur] .welcome-text{font-family:'Noto Nastaliq Urdu',serif;line-height:2.1}
-        html[lang=ar] .welcome-text{font-family:'Tajawal',sans-serif}
-        .chat-hint.hide{display:none}
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- صورة الطيار -->
     <div class="pilot-img-container">
         <!-- تأكد أن الصورة اسمها ahmed.jpg وموجودة في نفس الفولدر -->
-        <img src="ahmed.jpg" alt="Captain Ahmed Al Marzooqi" class="pilot-img" onerror="this.style.display='none'">
+        <img src="assets/Images/ahmed.jpg" alt="Captain Ahmed Al Marzooqi" class="pilot-img" onerror="this.style.display='none'">
     </div>
 
     <!-- رسالة الترحيب بالإنجليزية -->
@@ -270,30 +58,11 @@
         
         <!-- زرار المساعد: تأكد أن الصورة اسمها assistant.jpg -->
         <button class="assistant-btn" onclick="openChat()" aria-label="Chat">
-            <img src="assistant.jpg" alt="Assistant" onerror="this.style.display='none'">
+            <img src="assets/Images/assistant.jpg" alt="Assistant" onerror="this.style.display='none'">
         </button>
     </div>
 
-    <script>
-        const T={
-          ar:{d:'rtl',w:'مرحباً بك في صفحة الكابتن<br><span>أحمد المرزوقي</span>',s:'نظراً لطبيعة عملي أنا خارج البلاد حالياً، ويسعد مساعدي الشخصي بخدمتك في الوقت الحالي. ✈️',h:'يسعدني التواصل معك'},
-          en:{d:'ltr',w:'Welcome to the page of Captain<br><span>Ahmed Al Marzooqi</span>',s:"Due to the nature of my work, I'm currently traveling abroad. My personal assistant is happy to help you in the meantime. ✈️",h:'Chat with my assistant'},
-          ur:{d:'rtl',w:'کیپٹن کے صفحے پر خوش آمدید<br><span>احمد المرزوقی</span>',s:'اپنے کام کی نوعیت کی وجہ سے میں اس وقت ملک سے باہر ہوں۔ میرا ذاتی اسسٹنٹ اس دوران آپ کی مدد کے لیے حاضر ہے۔ ✈️',h:'میرے اسسٹنٹ سے بات کریں'}
-        };
-        function changeLang(l){
-            const t=T[l];
-            document.documentElement.lang=l;
-            document.documentElement.dir=t.d;
-            document.querySelector('.welcome-text').innerHTML=t.w;
-            document.querySelector('.status-card p').innerHTML=t.s;
-            document.getElementById('chatHint').innerHTML=t.h;
-            document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.l===l));
-            try{localStorage.setItem('lang',l)}catch(e){}
-            window.dispatchEvent(new Event('langchange'));
-        }
-        let saved;try{saved=localStorage.getItem('lang')}catch(e){}
-        changeLang(saved||({ar:'ar',ur:'ur'})[(navigator.language||'').slice(0,2)]||'en');
-    </script>
-    <script src="chatbot.js"></script>
+    <script src="script.js"></script>
+    
 </body>
 </html>
